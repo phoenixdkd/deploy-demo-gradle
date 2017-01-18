@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group "com.techsure"
+version "1.0"
+
+mainClassName = "com.techsure.module.deploy.demo.gradle.App"
+
+repositories {
+    mavenCentral()
+}
+jar {
+	baseName 'gradle'
+    manifest {
+        attributes 'Main-Class': 'com.techsure.module.deploy.demo.gradle.App'
+    }
+}
